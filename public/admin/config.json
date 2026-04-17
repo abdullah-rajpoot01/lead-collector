@@ -1,0 +1,86 @@
+{
+  "$schema": "https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json",
+  "backend": {
+    "name": "github",
+    "repo": "abdullah-rajpoot01/real-estate-data"
+  },
+  "media_folder": "/public/media",
+  "public_folder": "/media",
+  "collections": [
+    {
+      "name": "leads",
+      "label": "Leads",
+      "path": "content/leads",
+      "type": "json",
+      "filename": "{{slug}}",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "phone",
+          "label": "Phone",
+          "type": "string"
+        },
+        {
+          "name": "whatsapp",
+          "label": "WhatsApp",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "string"
+        },
+        {
+          "name": "instagram",
+          "label": "Instagram",
+          "type": "string"
+        },
+        {
+          "name": "facebook",
+          "label": "Facebook",
+          "type": "string"
+        },
+        {
+          "name": "x",
+          "label": "X (Twitter)",
+          "type": "string"
+        },
+        {
+          "name": "linkedin",
+          "label": "LinkedIn",
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "label": "Source",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "label": "Status",
+          "type": "select",
+          "options": [
+            "new",
+            "follow_up",
+            "interested",
+            "not_interested",
+            "closed"
+          ]
+        },
+        {
+          "name": "notes",
+          "label": "Notes",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+
+}
+
+
