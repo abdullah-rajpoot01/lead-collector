@@ -2,85 +2,94 @@
   "$schema": "https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json",
   "backend": {
     "name": "github",
-    "repo": "abdullah-rajpoot01/real-estate-data"
+    "repo": "abdullah-rajpoot01/lead-collector",
+    "branch": "main"
   },
-  "media_folder": "/public/media",
+  "media_folder": "public/media",
   "public_folder": "/media",
   "collections": [
     {
-      "name": "leads",
-      "label": "Leads",
-      "path": "content/leads",
-      "type": "json",
-      "filename": "{{slug}}",
+      "name": "advocates-leads",
+      "label": "Advocates Leads",
+      "folder": "content/leads/advocates",
+      "format": "json",
+      "create": true,
+      "slug": "{{name}}",
       "fields": [
         {
           "name": "name",
           "label": "Name",
-          "type": "string",
+          "widget": "string",
           "required": true
         },
         {
           "name": "phone",
           "label": "Phone",
-          "type": "string"
+          "widget": "string",
+          "required": false
         },
         {
           "name": "whatsapp",
           "label": "WhatsApp",
-          "type": "string"
+          "widget": "string",
+          "required": false
         },
         {
           "name": "email",
           "label": "Email",
-          "type": "string"
+          "widget": "string",
+          "required": false
         },
         {
           "name": "instagram",
           "label": "Instagram",
-          "type": "string"
+          "widget": "string",
+          "required": false
         },
         {
           "name": "facebook",
           "label": "Facebook",
-          "type": "string"
+          "widget": "string",
+          "required": false
         },
         {
           "name": "x",
           "label": "X (Twitter)",
-          "type": "string"
+          "widget": "string",
+          "required": false
         },
         {
           "name": "linkedin",
           "label": "LinkedIn",
-          "type": "string"
+          "widget": "string",
+          "required": false
         },
         {
           "name": "source",
           "label": "Source",
-          "type": "string"
+          "widget": "string",
+          "required": false
         },
         {
           "name": "status",
           "label": "Status",
-          "type": "select",
+          "widget": "select",
+          "default": "new",
           "options": [
-            "new",
-            "follow_up",
-            "interested",
-            "not_interested",
-            "closed"
+            { "label": "New", "value": "new" },
+            { "label": "Follow Up", "value": "follow_up" },
+            { "label": "Interested", "value": "interested" },
+            { "label": "Not Interested", "value": "not_interested" },
+            { "label": "Closed", "value": "closed" }
           ]
         },
         {
           "name": "notes",
           "label": "Notes",
-          "type": "text"
+          "widget": "text",
+          "required": false
         }
       ]
     }
   ]
-
 }
-
-
